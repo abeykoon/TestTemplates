@@ -6,7 +6,6 @@ jobs:
   add_connector_label:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - uses: actions-ecosystem/action-add-labels@v1
         - if: ${{ contains(github.event.comment.body, 'module/aws-s3') }}
           with:
