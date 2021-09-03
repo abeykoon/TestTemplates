@@ -1,15 +1,15 @@
-name: Add Connector Label
+name: Add Label
+
 on:
   issues:
     types: opened
+
 jobs:
-  add_connector_label:
+  add_label:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - uses: actions-ecosystem/action-add-labels@v1
-        - if: ${{ contains(github.event.comment.body, 'module/aws-s3') }}
-          with:
+        if: ${{ startsWith(github.event.comment.body, '/add-labels') }}
+        with:
           labels: module/aws-s3
-        - if: ${{ contains(github.event.comment.body, 'module/aws-sqs') }}
-          with:
-          labels: module/aws-sqs
