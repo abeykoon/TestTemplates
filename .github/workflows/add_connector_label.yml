@@ -11,6 +11,7 @@ jobs:
           script: |
             console.log(context)
             var body = context.issue.body
+            console.log(body)
             if(body.contains('module/aws-s3')) {
                 github.issues.addLabels({
                 issue_number: context.issue.number,
