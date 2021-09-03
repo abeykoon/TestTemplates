@@ -11,8 +11,8 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
           var body = github.event.comment.body
-          var matches = body.contains('module/aws-s3')
-          if(matches) {
+          //var matches = body.contains('module/aws-s3')
+          if(true) {
               github.issues.addLabels({
                 issue_number: context.issue.number,
                 owner: context.repo.owner,
