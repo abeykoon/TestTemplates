@@ -10,7 +10,7 @@ jobs:
         with:
           script: |
             var body = context.payload.issue.body
-            var matches = body.contains('module/aws-s3')
+            var matches = body.includes('module/aws-s3')
             if(matches) {
                 github.issues.addLabels({
                 issue_number: context.issue.number,
