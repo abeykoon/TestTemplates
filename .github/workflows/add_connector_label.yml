@@ -10,14 +10,18 @@ jobs:
         with:
           script: |
             var body = context.payload.issue.body
-            var matches = body.includes('module/aws-s3')
-            var labelName = 'module/aws-s3'
-            if(matches) {
-                github.issues.addLabels({
-                issue_number: context.issue.number,
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                labels: [labelName]
-                })
+            var words = body.split(" ");
+            for (var i = 0; i < words.length - 1; i++) {
+                var word = words[i]
+                if(word.startsWith('module/')) {
+                    github.issues.addLabels({
+                    issue_number: context.issue.number,
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    labels: [word]
+                     })
+                    break 
+                }
             }
+
 
