@@ -9,7 +9,7 @@ jobs:
       - uses: actions/github-script@v4
         with:
           script: |
-            var body = github.event.comment.body
+            var body = context.payload.issue.body
             console.log('AAAAAAAAAAAA')
             console.log(body)
 
