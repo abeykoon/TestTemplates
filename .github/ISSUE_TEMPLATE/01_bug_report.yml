@@ -1,10 +1,8 @@
 # pls refer https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
-name: Bug Report New
+name: 🐞 Bug Report 
 description: File a bug report
 title: "[Bug]: "
-labels: [bug, triage]
-assignees:
-  - octocat
+labels: [Type/Bug]
 body:
   - type: markdown
     attributes:
@@ -19,9 +17,32 @@ body:
         - connectors/openapi (Open API Connector)
         - module/aws-s3 (AWS S3)
         - module/aws-sqs (AWS SQS)
-        - module/azure-ad (Azure AD)
-        - module/azure-eventhub (Azure Eventhub)
-        - module/azure-servicebus (Azure Service Bus)
+        - module/azure-ad (Azure Active Directory)
+        - module/azure-eventhub (Azure Event Hub)
+        - module/azure-servicebus (Azure Servicebus)
+        - module/azure-storageservice (Azure Blob & Storage Service)
+        - module/cosmosdb (Cosmos DB)
+        - module/gcalendar (Google Calendar)
+        - module/gdrive (Google Drive)
+        - module/github (Github)
+        - module/gmail (Gmail)
+        - module/google-peopleapi (People API)
+        - module/gsheet (Google Sheet)
+        - module/microsoft-excel (MS Excel)
+        - module/microsoft-onedrive (MS OneDrive)
+        - module/microsoft-onenote (MS OneNote)
+        - module/microsoft-teams (MS Teams)
+        - module/mongodb (Mongo DB)
+        - module/netsuite (Netsuite)
+        - module/outlook-calendar (Outlook Calendar)
+        - module/outlook-mail (Outlook Mail)
+        - module/redis (Redis)
+        - module/salesforce (Salesforce)
+        - module/slack (Slack)
+        - module/snowflake (SnowFlake)
+        - module/twilio (Twilio)
+        - module/twitter (Twitter)
+        - other (None Listed Above)
     validations:
       required: true
   - type: textarea
