@@ -18,12 +18,15 @@ jobs:
     permissions:
       issues: write
     steps:
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - name: Create team sync issue
         uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
         with:
           assignees: "abeykoon"
           labels: "Type/Bug"
-          title: "Team sync"
+          title: "Team sync for week starting ${{ steps.date.outputs.date }}"
           body: |
             ### Agenda
 
