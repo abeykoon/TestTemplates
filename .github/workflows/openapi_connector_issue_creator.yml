@@ -25,7 +25,7 @@ jobs:
         uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
         with:
           assignees: "abeykoon"
-          labels: "Type/Improvement", "weekly sync"
+          labels: "Type/Improvement,weekly sync"
           title: "[Improvement]: [Week Starting From ${{ steps.date.outputs.date }}] Generate Open API Connectors "
           body: |
             ### Connector Name
