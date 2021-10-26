@@ -26,7 +26,7 @@ jobs:
         with:
           assignees: "abeykoon"
           labels: "Type/Improvement,weekly sync"
-          title: "[Improvement]: [Week Starting From ${{ steps.date.outputs.date }}] Generate Open API Connectors "
+          title: "[Improvement]: [Week Start. ${{ steps.date.outputs.date }}] Generate Open API Connectors "
           body: |
             ### Connector Name
 
