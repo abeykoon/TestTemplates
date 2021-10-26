@@ -25,20 +25,23 @@ jobs:
         uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
         with:
           assignees: "abeykoon"
-          labels: "Type/Bug"
-          title: "Team sync for week starting ${{ steps.date.outputs.date }}"
+          labels: "Type/Improvement", "weekly sync"
+          title: "[Improvement]: [Week Starting From ${{ steps.date.outputs.date }}] Generate Open API Connectors "
           body: |
-            ### Agenda
+            ### Connector Name
 
-            - [ ] Start the recording
-            - [ ] Check-ins
-            - [ ] Discussion points
-            - [ ] Post the recording
-                    
-            ### Discussion Points
-            Add things to discuss below
+            connectors/openapi (Open API Connector)
 
-            - [Work this week](https://github.com/orgs/github/projects/3)
+            ### Suggested improvement
+
+            Generate following connectors Using [Open API to Ballerina](https://github.com/ballerina-platform/ballerina-openapi) tool.
+
+            - [ ] - [Connector Name](link to the Open API)
+
+            ### Related issues
+
+            N/A
+
           pinned: false
           close-previous: false
         env:
